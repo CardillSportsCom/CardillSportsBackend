@@ -1,23 +1,54 @@
-﻿body{
-    background-color:#000000 !important;
-}
-.navbar-brand {
-    color: white !important;
+﻿body {
+    background-color: #000000 !important;
 }
 
-.navbar-brand >h3{
-    margin-top:10px !important;
+.navbar-brand {
+    color: white !important;
+    padding: 10px 10px 10px 15px !important;
 }
+
+    .navbar-brand > h3 {
+        margin-top: 10px !important;
+    }
 
 .navbar-nav > li > a {
     color: white !important;
-    padding:2em 3em !important;
+    padding: 28px 84px 0px 0px !important;
 }
 
-.navbar-inverse{
-    background-color:#000000 !important;
+.navbar-inverse {
+    background-color: #000000 !important;
 }
-.container{
-    padding:0px !important;
-    margin:0px !important;
+
+.container {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+.navbar-collapse {
+    padding-top: 8px;
+}
+
+.articleTab {
+    font-family: 'PT Serif Caption';
+    font-size: 18px;
+}
+
+.recentArticles {
+    font-family: 'PT Serif Caption';
+    color: white !important;
+}
+
+.recentArticleImage{
+    margin:0 auto;
+}
+.articleImage{
+    position:relative;
+}
+.caption-bottom{
+    width:100%;
+    position:absolute;
+    bottom:0;
+    background:#3D3D3D;
+    opacity:0.6;
 }
