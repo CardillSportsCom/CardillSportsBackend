@@ -1,0 +1,23 @@
+﻿body{
+    background-color:#000000 !important;
+}
+.navbar-brand {
+    color: white !important;
+}
+
+.navbar-brand >h3{
+    margin-top:10px !important;
+}
+
+.navbar-nav > li > a {
+    color: white !important;
+    padding:2em 3em !important;
+}
+
+.navbar-inverse{
+    background-color:#000000 !important;
+}
+.container{
+    padding:0px !important;
+    margin:0px !important;
+}
