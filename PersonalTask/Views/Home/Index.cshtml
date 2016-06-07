@@ -6,54 +6,73 @@
     <div class="col-md-10">
         <div class="articleImage">
             <img class="img-responsive" src="~/Content/images/wadevscojo.jpg" />
-            <div class="caption-bottom">
-                <div class="col-md-8">
-                    <div class="recentArticles" style="margin-left:50px;margin-bottom:50px;">
-                        <span style="font-size:26px;"><strong>Round 2 Game 7 Preview</strong></span>
-                        <br />
-                        <span style="font-size:20px;">VITHUSHAN NAMA | Contributor</span>
+            <div class="row">
+                <div class="caption-bottom col-md-6" style="border-radius:5px;">
+                    <div class="col-md-12">
+                        <div class="mostRecentArticle" style="padding:20px 20px 20px 20px;">
+                            <a href="" style="color:#FFFFFF"><span style="font-size:31px;"><strong>Round 2 Game 7 Preview</strong></span></a>
+                            <br />
+                            <span style="font-size:20px;font-family:Lato;">VITHUSHAN NAMA | Contributor</span>
+                        </div>
                     </div>
                 </div>
-                @*<div class="col-md-4">
-                    <button>Read On</button>
-                </div>*@
             </div>
         </div>
         <div class="mostRecentArticles" style="background-color:#111010;border:solid;border-color:#353434;border-width:1px;">
-            <div class="row">
-                <div class="col-md-12">
-                    <img src="~/Content/images/most recent title.png" class="img-responsive recentArticleImage" />
-                </div>
-            </div>
             <br />
             <div class="row">
-                <div class="col-md-4 text-center recentArticles">
-                    <a href="@Url.Action("Articles","Home")"><img src="~/Content/images/Stern-Veto-Gif.jpg" class="img-responsive recentArticleImage" style="height:150px;" /></a>
-                    <br />
-                    VITHUSHAN NAMA | Contributor
-                    <br />
-                    The Power of Veto
+                <div class="col-md-3 text-center recentArticles">
+                    <div class="thumbnail" style="margin:10px;">
+                        <img src="~/Content/images/Stern-Veto-Gif.jpg" class="img-responsive recentArticleImage" style="height:150px;" />
+                        <br />
+                        <span>VITHUSHAN NAMA | Contributor</span>
+                        <br />
+                        <span>The Power of Veto</span>
+                        <br /><br />
+                        <a href="@Url.Action("ViewArticle","Article", new { articleID = 1})" class="btn readMoreButton"><span>Read More</span></a>
+                    </div>
                 </div>
-                <div class="col-md-4 text-center recentArticles">
-                    <a href="@Url.Action("Articles","Home")"><img src="~/Content/images/940-leafs-8col.jpg" class="img-responsive recentArticleImage" style="height:150px;" /></a>
-                    <br />
-                    ZEN POTTER | Contributor
-                    <br />
-                    The Day I said What if
+                <div class="col-md-3 text-center recentArticles">
+                    <div class="thumbnail" style="margin:10px;">
+                        <img src="~/Content/images/940-leafs-8col.jpg" class="img-responsive recentArticleImage" style="height:150px;" />
+                        <br />
+                        <span>ZEN POTTER | Contributor</span>
+                        <br />
+                        <span>The Day I said What if</span>
+                        <br /><br />
+                        <a href="@Url.Action("ViewArticle","Article", new { articleID = 1})" class="btn readMoreButton"><span>Read More</span></a>
+                    </div>
                 </div>
-                <div class="col-md-4 text-center recentArticles">
-                    <a href="@Url.Action("Articles","Home")"><img src="~/Content/images/940-leafs-8col.jpg" class="img-responsive recentArticleImage" style="height:150px;" /></a>
-                    <br />
-                    ZEN POTTER | Contributor
-                    <br />
-                    The Day I said What if
+                <div class="col-md-3 text-center recentArticles">
+                    <div class="thumbnail" style="margin:10px;">
+                        <img src="~/Content/images/940-leafs-8col.jpg" class="img-responsive recentArticleImage" style="height:150px;" />
+                        <br />
+                        <span>ZEN POTTER | Contributor</span>
+                        <br />
+                        <span>The Day I said What if</span>
+                        <br /><br />
+                        <a href="@Url.Action("ViewArticle","Article", new { articleID = 1})" class="btn readMoreButton"><span>Read More</span></a>
+
+                    </div>
+                </div>
+                <div class="col-md-3 text-center recentArticles">
+                    <div class="thumbnail" style="margin:10px;">
+                        <img src="~/Content/images/940-leafs-8col.jpg" class="img-responsive recentArticleImage" style="height:150px;" />
+                        <br />
+                        <span>ZEN POTTER | Contributor</span>
+                        <br />
+                        <span>The Day I said What if</span>
+                        <br /><br />
+                        <a href="@Url.Action("ViewArticle","Article", new { articleID = 1})" class="btn readMoreButton"><span>Read More</span></a>
+
+                    </div>
                 </div>
             </div>
             <br /><br /><br />
             <div class="row">
                 <div class="col-md-12">
                     <img src="~/Content/images/copyright.png" class="img-responsive recentArticleImage" />
-                    <br/>
+                    <br />
                 </div>
             </div>
         </div>

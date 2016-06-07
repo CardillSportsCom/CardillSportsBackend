@@ -15,8 +15,9 @@ namespace PersonalTask.Models
 
 
         public DbSet<User> Users { get; set; }
-        public DbSet<Task> Tasks { get; set; }
-        public DbSet<TaskEntry> TaskEntries { get; set; }
+        public DbSet<Article> Articles { get; set; }
+        public DbSet<ArticleItem> ArticleItems { get; set; }
+        public DbSet<ArticleItemType> ArticleItemTypes { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

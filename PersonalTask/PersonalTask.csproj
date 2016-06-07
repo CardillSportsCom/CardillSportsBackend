@@ -125,22 +125,16 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ArticleController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TaskController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201603052134473_Initial.cs" />
-    <Compile Include="Migrations\201603052134473_Initial.Designer.cs">
-      <DependentUpon>201603052134473_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201603052152084_TaskEntry.cs" />
-    <Compile Include="Migrations\201603052152084_TaskEntry.Designer.cs">
-      <DependentUpon>201603052152084_TaskEntry.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Article.cs" />
+    <Compile Include="Models\CardillSportsDB.cs" />
     <Compile Include="Models\Task.cs" />
     <Compile Include="Models\Model.cs" />
     <Compile Include="Models\User.cs" />
@@ -154,6 +148,8 @@
     <Content Include="Content\images\copyright.png" />
     <Content Include="Content\images\Logo 2.png" />
     <Content Include="Content\images\logo 4.png" />
+    <Content Include="Content\images\Logo 5.png" />
+    <Content Include="Content\images\logo 6.png" />
     <Content Include="Content\images\most recent title.png" />
     <Content Include="Content\images\Stern-Veto-Gif.jpg" />
     <Content Include="Content\images\wadevscojo.jpg" />
@@ -2721,6 +2717,7 @@
     <Content Include="Views\Home\Videos.cshtml" />
     <Content Include="Views\Home\Articles.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Article\ViewArticle.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -2732,14 +2729,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201603052134473_Initial.resx">
-      <DependentUpon>201603052134473_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201603052152084_TaskEntry.resx">
-      <DependentUpon>201603052152084_TaskEntry.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

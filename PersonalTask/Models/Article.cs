@@ -16,6 +16,22 @@ namespace PersonalTask.Models
         public bool Deleted { get; set; }
 
         public virtual User Owner { get; set; }
+        public virtual List<ArticleItem> ArticleItems { get; set; }
 
+    }
+    public class ArticleItem
+    {
+        public int ID { get; set; }
+        public int OrderNumber { get; set; }
+        public ArticleItemType Type { get; set; }
+        public string Paragraph { get; set; }
+        public string Link { get; set; }
+
+        public virtual Article ArticleConnection { get; set; }
+    }
+    public class ArticleItemType
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
     }
 }

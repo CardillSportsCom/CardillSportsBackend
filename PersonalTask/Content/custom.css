@@ -2,9 +2,15 @@
     background-color: #000000 !important;
 }
 
+.navbar{
+    background-color: #CFC9AD !important;
+    border-bottom-width:3.5px !important;
+    border-bottom-color:#666666 !important;
+}
+
 .navbar-brand {
-    color: white !important;
-    padding: 10px 10px 10px 15px !important;
+    color: #FFFFFF !important;
+    padding: 10px 10px 6px 15px !important;
 }
 
     .navbar-brand > h3 {
@@ -12,12 +18,8 @@
     }
 
 .navbar-nav > li > a {
-    color: white !important;
+    color: #595959 !important;
     padding: 28px 84px 0px 0px !important;
-}
-
-.navbar-inverse {
-    background-color: #000000 !important;
 }
 
 .container {
@@ -30,13 +32,17 @@
 }
 
 .articleTab {
-    font-family: 'PT Serif Caption';
+    font-family: 'Lato';
     font-size: 18px;
+}
+
+.mostRecentArticle {
+    font-family: 'PT Serif Caption';
+    color: white !important;
 }
 
 .recentArticles {
     font-family: 'PT Serif Caption';
-    color: white !important;
 }
 
 .recentArticleImage{
@@ -46,9 +52,30 @@
     position:relative;
 }
 .caption-bottom{
-    width:100%;
+    width:50%;
     position:absolute;
     bottom:0;
-    background:#3D3D3D;
-    opacity:0.6;
+    background:rgba(0,0,0,0.85);
+    margin-bottom:100px;
+    margin-right:100px;
+}
+
+.readMoreButton{
+    background-color:#D0021B;
+    color:white;
+    opacity:1.0;
+    border-radius:8px !important;
+    margin-bottom:6px !important;
+}
+.readMoreButton>span{
+    padding:4px;
+}
+.btn:hover{
+    background-color:#CD0808 !important;
+    color:white !important;
+}
+
+.AboutMainText{
+    color:white;
+    font-weight:bold;
 }
