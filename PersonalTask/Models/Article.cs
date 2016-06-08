@@ -12,7 +12,7 @@ namespace PersonalTask.Models
         public string ImageLink { get; set; }
         public DateTime DateCreated { get; set; }
         public DateTime DateUpdated { get; set; }
-        public DateTime DateDeleted { get; set; }
+        public DateTime? DateDeleted { get; set; }
         public bool Deleted { get; set; }
 
         public virtual User Owner { get; set; }
@@ -23,11 +23,12 @@ namespace PersonalTask.Models
     {
         public int ID { get; set; }
         public int OrderNumber { get; set; }
-        public ArticleItemType Type { get; set; }
+
         public string Paragraph { get; set; }
         public string Link { get; set; }
 
         public virtual Article ArticleConnection { get; set; }
+        public virtual ArticleItemType Type { get; set; }
     }
     public class ArticleItemType
     {

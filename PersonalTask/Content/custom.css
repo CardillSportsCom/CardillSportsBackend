@@ -3,7 +3,7 @@
 }
 
 .navbar{
-    background-color: #CFC9AD !important;
+    background-color: #C1C1C1 !important;
     border-bottom-width:3.5px !important;
     border-bottom-color:#666666 !important;
 }
@@ -78,4 +78,7 @@
 .AboutMainText{
     color:white;
     font-weight:bold;
+}
+.thumbnailInfo{
+    min-height:250px;
 }

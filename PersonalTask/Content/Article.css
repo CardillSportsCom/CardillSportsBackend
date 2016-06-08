@@ -1,0 +1,30 @@
+﻿.articleTitle {
+    color: white;
+    font-family: 'Lato';
+}
+
+.articleText {
+    font-family: 'Lato';
+    font-size: 18px;
+    color: black;
+}
+
+.articleImg {
+    margin: 0 auto;
+}
+
+.articleDate {
+    color: #125781;
+}
+
+.articleUnderlay {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.articleOwner {
+    color: white;
+    font-family: 'Lato';
+    font-size: 18px;
+}

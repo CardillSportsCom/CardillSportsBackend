@@ -6,7 +6,7 @@ namespace PersonalTask.Models
 {
 
 
-    public partial class Model : DbContext
+    public class Model : DbContext
     {
         public Model()
             : base("name=EntityModel")

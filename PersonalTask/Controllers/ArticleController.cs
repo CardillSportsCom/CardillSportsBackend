@@ -10,9 +10,18 @@ namespace PersonalTask.Controllers
     public class ArticleController : Controller
     {
         [HttpGet]
-        public ActionResult ViewArticle(int articleID)
+        public ActionResult ViewArticle(int articleID=0)
         {
             var model = new Article();
+            if (articleID == null)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            model = CardillSportsDB.GetArticle(articleID);
+            if (model == null)
+            {
+                return RedirectToAction("Index", "Home");
+            }
             return View(model);
         }
 

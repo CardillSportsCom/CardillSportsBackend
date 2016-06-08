@@ -1,9 +1,41 @@
-﻿
+﻿@using PersonalTask.Models
 @{
     ViewBag.Title = "ViewArticle";
 }
-
+@model Article
 <div class="row">
+    <img src="~/Content/images/@Model.ImageLink" class="img-responsive articleImg"/>
+</div>
+<div class="row">
+    <div class="col-md-2">
 
+    </div>
+    <div class="col-md-8">
+        <h1 class="articleTitle text-center">@Model.Name</h1>
+        <div class="text-center">
+            <span class="articleDate">@Model.DateUpdated.ToLongDateString()</span>
+        </div>
+        <br/>
+        <div class="articleUnderlay">
+            @{foreach (ArticleItem aItem in @Model.ArticleItems)
+            {
+                if (aItem.Type.Name == "Text")
+                {
+                    <p class="articleText">@Html.Raw(aItem.Paragraph)</p>
+                }
+            }
+
+            }
+
+        </div>
+        <br/>
+        <div class="text-center">
+            <span class="articleOwner">@Model.Owner.firstName.ToUpper() @Model.Owner.lastName.ToUpper() | Contributor</span>
+        </div>
+        <br/>
+    </div>
+    <div class="col-md-2">
+
+    </div>
 </div>
 
