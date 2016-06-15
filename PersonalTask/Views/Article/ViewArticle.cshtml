@@ -2,10 +2,7 @@
 @{
     ViewBag.Title = "ViewArticle";
 }
-@model Article
-<div class="row">
-    <img src="~/Content/images/@Model.ImageLink" class="img-responsive articleImg"/>
-</div>
+
 <div class="row">
     <div class="col-md-2">
 
@@ -15,7 +12,19 @@
         <div class="text-center">
             <span class="articleDate">@Model.DateUpdated.ToLongDateString()</span>
         </div>
-        <br/>
+        <br />
+        <div class="text-center">
+            <span class="articleOwner">@Model.Owner.firstName.ToUpper() @Model.Owner.lastName.ToUpper() | Contributor</span>
+        </div>
+        <br />
+        @model Article
+        @if (Model.ImageLink != null)
+        {
+            <div class="row">
+                <img src="~/Content/images/@Model.ImageLink" class="img-responsive articleImg" />
+            </div>
+        }
+        <br />
         <div class="articleUnderlay">
             @{foreach (ArticleItem aItem in @Model.ArticleItems)
             {
@@ -23,16 +32,17 @@
                 {
                     <p class="articleText">@Html.Raw(aItem.Paragraph)</p>
                 }
+                else if (aItem.Type.Name == "Image")
+                {
+                    <img class="img-responsive" src="~/Content/images/@aItem.Link" />
+                    <br />
+                }
             }
 
             }
 
         </div>
-        <br/>
-        <div class="text-center">
-            <span class="articleOwner">@Model.Owner.firstName.ToUpper() @Model.Owner.lastName.ToUpper() | Contributor</span>
-        </div>
-        <br/>
+        <br />
     </div>
     <div class="col-md-2">
 

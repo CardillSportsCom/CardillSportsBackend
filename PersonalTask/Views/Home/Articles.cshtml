@@ -1,8 +1,37 @@
-﻿
+﻿@using PersonalTask.Models
 @{
-    ViewBag.Title = "Articles";
+    ViewBag.Title = "Cardill Sports | Articles";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@model List<Article>
 
-<h2>Articles</h2>
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        @{
+            foreach (Article a in Model)
+            {
+                <a href="@Url.Action("ViewArticle","Article", new { articleID = a.ID})">
+                    <div class="articleItem" style="background-image:url(/Content/images/@a.ImageLink);">
+                        <div class="articleItemCaption text-left">
+                            <p align="right">
+                                <h3>@a.Name</h3>
+                                @if (a.ArticleItems.Count > 0)
+                                {
+                                    <span>"@a.ArticleItems.FirstOrDefault(x => x.Type.Name == "Text").Paragraph.Substring(0, 150) ..."</span>
+                                    <br />
+                                    <br />
+                                }
+                                <span>@a.DateUpdated.ToLongDateString()</span>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <br />
+                <br />
+            }
+        }
+    </div>
+    <div class="col-md-1"></div>
+</div>
 

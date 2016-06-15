@@ -2,15 +2,17 @@
     background-color: #000000 !important;
 }
 
-.navbar{
+.navbar {
     background-color: #C1C1C1 !important;
-    border-bottom-width:3.5px !important;
-    border-bottom-color:#666666 !important;
+    border-bottom-width: 3.5px !important;
+    border-bottom-color: #666666 !important;
 }
 
 .navbar-brand {
     color: #FFFFFF !important;
     padding: 10px 10px 6px 15px !important;
+    font-size: 26px;
+    font-family: 'PT Serif Caption';
 }
 
     .navbar-brand > h3 {
@@ -19,16 +21,18 @@
 
 .navbar-nav > li > a {
     color: #595959 !important;
-    padding: 28px 84px 0px 0px !important;
+    padding: 23px 84px 0px 0px !important;
 }
 
-.container {
-    padding: 0px !important;
-    margin: 0px !important;
-}
+    .navbar-nav > li > a:hover {
+        color: white !important;
+        padding: 23px 84px 0px 0px !important;
+    }
 
-.navbar-collapse {
-    padding-top: 8px;
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1250px !important;
+    }
 }
 
 .articleTab {
@@ -45,40 +49,45 @@
     font-family: 'PT Serif Caption';
 }
 
-.recentArticleImage{
-    margin:0 auto;
-}
-.articleImage{
-    position:relative;
-}
-.caption-bottom{
-    width:50%;
-    position:absolute;
-    bottom:0;
-    background:rgba(0,0,0,0.85);
-    margin-bottom:100px;
-    margin-right:100px;
+.recentArticleImage {
+    margin: 0 auto;
 }
 
-.readMoreButton{
-    background-color:#D0021B;
-    color:white;
-    opacity:1.0;
-    border-radius:8px !important;
-    margin-bottom:6px !important;
-}
-.readMoreButton>span{
-    padding:4px;
-}
-.btn:hover{
-    background-color:#CD0808 !important;
-    color:white !important;
+.articleImage {
+    position: relative;
 }
 
-.AboutMainText{
-    color:white;
-    font-weight:bold;
+.caption-bottom {
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    background: rgba(0,0,0,0.85);
+    margin-bottom: 100px;
+    margin-right: 100px;
 }
-.thumbnailInfo{
-    min-height:250px;
+
+.readMoreButton {
+    background-color: #D0021B;
+    color: white;
+    opacity: 1.0;
+    border-radius: 8px !important;
+    margin-bottom: 6px !important;
+}
+
+    .readMoreButton:hover {
+        color: white;
+        background-color: #9D0214 !important;
+    }
+
+    .readMoreButton > span {
+        padding: 4px;
+    }
+
+.AboutMainText {
+    color: white;
+    font-weight: bold;
+}
+
+.thumbnailInfo {
+    min-height: 250px;
 }

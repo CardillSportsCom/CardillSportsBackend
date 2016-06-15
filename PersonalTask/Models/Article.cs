@@ -10,6 +10,7 @@ namespace PersonalTask.Models
         public int ID { get; set; }
         public string Name { get; set; }
         public string ImageLink { get; set; }
+        public string HeadLine { get; set; }
         public DateTime DateCreated { get; set; }
         public DateTime DateUpdated { get; set; }
         public DateTime? DateDeleted { get; set; }

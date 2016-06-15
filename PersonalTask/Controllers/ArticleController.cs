@@ -9,6 +9,7 @@ namespace PersonalTask.Controllers
 {
     public class ArticleController : Controller
     {
+
         [HttpGet]
         public ActionResult ViewArticle(int articleID=0)
         {
