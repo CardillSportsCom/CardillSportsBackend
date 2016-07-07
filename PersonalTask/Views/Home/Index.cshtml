@@ -32,7 +32,15 @@
                                 <div class="thumbnailInfo">
                                     <img src="~/Content/images/@Model[i].ImageLink" class="img-responsive recentArticleImage" style="height:150px;" />
                                     <br />
-                                    <span>@Model[i].Owner.firstName.ToUpper() @Model[i].Owner.lastName.ToUpper() | Contributor</span>
+                                    @if (Model[i].Owner.lastName != null)
+                                    {
+                                        <span>@Model[i].Owner.firstName.ToUpper() @Model[i].Owner.lastName.ToUpper() | Contributor</span>
+                                    }
+                                    else
+                                    {
+                                        <span>@Model[i].Owner.firstName.ToUpper() | Contributor</span>
+
+                                    }
                                     <br />
                                     <span>@Model[i].Name</span>
                                 </div>
