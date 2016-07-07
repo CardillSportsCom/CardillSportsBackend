@@ -18,6 +18,7 @@ namespace PersonalTask.Models
         public DbSet<Article> Articles { get; set; }
         public DbSet<ArticleItem> ArticleItems { get; set; }
         public DbSet<ArticleItemType> ArticleItemTypes { get; set; }
+        public DbSet<Comment> Comments { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

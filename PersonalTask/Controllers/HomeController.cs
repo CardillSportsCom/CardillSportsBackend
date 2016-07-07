@@ -9,11 +9,29 @@ namespace PersonalTask.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public ActionResult Index(bool json=false)
         {
             List<Article> model = new List<Article>();
             model = CardillSportsDB.RecentArticles();
-            return View(model);
+            if (json)
+            {
+                List<ArticleJson> sendData = new List<ArticleJson>();
+                if (model.Count > 0)
+                {
+                    foreach (Article a in model)
+                    {
+                        sendData.Add(new ArticleJson(a));
+                    }
+                }
+                return Json(new
+                {
+                    articleList = sendData
+                }, JsonRequestBehavior.AllowGet);
+            }
+            else
+            {
+                return View(model);
+            }
         }
 
         public ActionResult About()
@@ -25,7 +43,18 @@ namespace PersonalTask.Controllers
         {
             var model = new List<Article>();
             model = CardillSportsDB.GetArticles(true);
-            return View(model);
+            List<ArticleJson> sendData = new List<ArticleJson>();
+            if (model.Count > 0)
+            {
+                foreach (Article a in model)
+                {
+                    sendData.Add(new ArticleJson(a));
+                }
+            }
+            return Json(new
+            {
+                articleList = sendData
+            }, JsonRequestBehavior.AllowGet);
         }
 
         public ActionResult Videos()

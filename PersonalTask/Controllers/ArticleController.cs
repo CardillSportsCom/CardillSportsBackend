@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using PersonalTask.Models;
+using Newtonsoft.Json;
 
 namespace PersonalTask.Controllers
 {
@@ -11,19 +12,25 @@ namespace PersonalTask.Controllers
     {
 
         [HttpGet]
-        public ActionResult ViewArticle(int articleID=0)
+        public ActionResult ViewArticle(int articleID = 0)
         {
             var model = new Article();
-            if (articleID == null)
-            {
-                return RedirectToAction("Index", "Home");
-            }
+            var targetURL = "articlePage";
             model = CardillSportsDB.GetArticle(articleID);
             if (model == null)
             {
-                return RedirectToAction("Index", "Home");
+                targetURL = "homePage";
+                model = new Article();
+                return Json(new
+                {
+                    targetURL = targetURL
+                }, JsonRequestBehavior.AllowGet);
             }
-            return View(model);
+            return Json(new
+            {
+                articleData = new ArticleJson(model),
+                targetURL = targetURL
+            }, JsonRequestBehavior.AllowGet);
         }
 
         public ActionResult AddArticle()

@@ -17,6 +17,30 @@ namespace PersonalTask.Models
         public bool deleted { get; set; }
         public DateTime DateCreated { get; set; }
 
-        public virtual List<Task> tasks { get; set; }
     }
+    public class UserJson
+    {
+        public UserJson()
+        {
+
+        }
+        public UserJson(User u)
+        {
+            this.ID = u.ID;
+            this.firstName = u.firstName;
+            this.lastName = u.lastName;
+            this.userName = u.userName;
+            this.email = u.email;
+            this.deleted = u.deleted;
+            this.DateCreated = u.DateCreated;
+        }
+        public int ID;
+        public string firstName;
+        public string lastName;
+        public string userName;
+        public string email;
+        public bool deleted;
+        public DateTime DateCreated;
+    }
+
 }
